@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE vs EV Cost Saving Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 ICE vs ⚡ EV Cost Saving Calculator</h1>
+
+        <div class="input-section">
+            <h2>ICE Vehicle</h2>
+            <label>ICE Price (₹): <input type="number" id="icePrice" placeholder="1500000"></label>
+            <label>Mileage (km/l): <input type="number" id="iceMileage" placeholder="10"></label>
+            <label>Fuel Cost (₹/Liter): <input type="number" id="fuelCost" placeholder="100"></label>
+
+            <h2>EV Vehicle</h2>
+            <label>EV Price (₹): <input type="number" id="evPrice" placeholder="2000000"></label>
+            <label>Total Range (km): <input type="number" id="evRange" placeholder="200"></label>
+            <label>Battery Capacity (kWh): <input type="number" id="batteryCapacity" placeholder="30"></label>
+            <label>Charging Cost (₹/kWh): <input type="number" id="chargingCost" placeholder="8"></label>
+            <label>Battery Replacement Cost (₹): <input type="number" id="batteryReplaceCost" placeholder="700000"></label>
+            <label>Battery Life (Years): <input type="number" id="batteryLife" placeholder="6"></label>
+
+            <h2>Customer Usage</h2>
+            <label>Monthly KM: <input type="number" id="monthlyKM" placeholder="3000"></label>
+            <label>Calculation Duration (Years, up to 15): 
+                <input type="number" id="calculationYears" placeholder="10" max="15">
+            </label>
+
+            <div class="checkbox">
+                <label><input type="checkbox" id="considerBattery"> Consider Battery Replacement</label>
+            </div>
+
+            <button onclick="calculateCost()">Calculate Cost Saving</button>
+        </div>
+
+        <div id="result-section">
+            <h2>Cost Saving Analysis</h2>
+            <canvas id="costChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
